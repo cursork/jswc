@@ -5,12 +5,12 @@
  max←1000
 
  style←'.ewc-thumb { background-color: #3498db; }' '.demo-button { background-color: turquoise; }'
- horzthumb←'background-color: #db9834'                  ⍝ Will override the horizontal one
 
  'F1'eWC'Form' 'Virtual Grid'(50 50)(500 800)('Coord' 'Pixel')('Event' 'KeyPress' 'CBUpdateScroll')
  'F1.STYLE'eWC'CssStyle'style
  'F1.UPDOWN'eWC'Scroll'('Align' 'Right')('Event' 'Scroll' 'CBUpdateScroll')('Range'max)('Thumb' 1)('Size'(480 20))
- 'F1.LEFTRIGHT'eWC'Scroll'('Align' 'Bottom')('Event' 'Scroll' 'CBUpdateScroll')('Range'max)('Thumb' 1)('Size'(20 780))('Css'horzthumb)
+ 'F1.STYLELR'eWC'CssStyled' '.ewc-thumb {background-color: #db9834 !important}'
+ 'F1.STYLELR.LEFTRIGHT'eWC'Scroll'('Align' 'Bottom')('Event' 'Scroll' 'CBUpdateScroll')('Range'max)('Thumb' 1)('Size'(20 780))
  'F1.VGRID'eWC'Grid'('Values'((⍕¨⍳n)∘.,'/',¨⍕¨⍳n))(150 100)(270 610)('CellWidths' 50)('Event'('CellMove' 'CellChange')'CBUpdateScroll')('RowTitles'('Row '∘,¨⍕¨⍳n))('ColTitles'(↓'ZI4'⎕FMT⍪⍳n))
  'F1.VGRID.E1'eWC'Edit' ''('Event' 'KeyPress' 'CBUpdateScroll')
  'F1.VGRID.E2'eWC'Edit' ''

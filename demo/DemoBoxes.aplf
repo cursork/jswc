@@ -9,8 +9,9 @@
 
  'F1.BX'eWC'SubForm'('Posn'(100 10))('Size'(formsize-110 20))('EdgeStyle' 'Groove') ⍝ To draw boxes in
 
- 'F1.L1'eWC'Label' 'Rows'(5 10)
- 'F1.L2'eWC'Label' 'Cols'(5 70)
+ 'F1.STYLELABELS'eWC'CssStyled' ('div {background-color: #db9834 !important}' 'div {font-weight: bolder !important}')
+ 'F1.STYLELABELS.L1'eWC'Label' 'Rows'(5 10)
+ 'F1.STYLELABELS.L2'eWC'Label' 'Cols'(5 70)
 
  'F1.ROWS'eWC'Edit'(⍕rows)(30 10)(23 50)('FieldType' 'Numeric') ('Event' 'GotFocus' 'CBEchoGotFocus')('FontObj' 'F1.FNT')('EdgeStyle' 'Ridge')
  'F1.COLS'eWC'Edit'(⍕cols)(30 70)(23 50)('FieldType' 'Numeric') ('Event' 'GotFocus' 'CBEchoGotFocus')('FontObj' 'F1.FNT')('EdgeStyle' 'Ridge')

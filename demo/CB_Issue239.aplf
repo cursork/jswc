@@ -1,0 +1,9 @@
+ CB_Issue239 args;obj;fruit;optstate;opts;txt
+
+ obj←1⊃args
+
+⎕←'BEFORE'
+ (('F1.FRUIT.C')∘,¨'123')eWG¨⊂'State'
+ ('F1.FRUIT.C',⍕?3)eWS('State' 1)
+⎕←'AFTER'
+ (('F1.FRUIT.C')∘,¨'123')eWG¨⊂'State'

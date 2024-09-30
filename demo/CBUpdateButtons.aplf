@@ -3,6 +3,7 @@
  obj←1⊃args
 
  fruit←('F1.FRUIT.C'∘,¨'123')eWG¨⊂'State'
+ ⎕←'UpdateButtons State:' fruit
  optstate←(opts←'F1.'∘,¨'ICE' 'CHOKO')eWG¨⊂'State'
 
  txt←'You selected ',('F1.FRUIT.C',⍕fruit⍳1)eWG'Caption'
